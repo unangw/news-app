@@ -7,16 +7,37 @@
 
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate, UIApplicationDelegate {
 
     var window: UIWindow?
+    var coordinator: AppCoordinator?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        
+        // Dismiss keyboard in ViewController
+        UIApplication.shared.sendAction(#selector(UIApplication.resignFirstResponder), to: nil, from: nil, for: nil)
+        
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        let appWindow = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        appWindow.windowScene = windowScene
+        
+        let navigationController = UINavigationController()
+        coordinator = AppCoordinator(navigationController)
+        
+        coordinator?.start()
+        
+        appWindow.rootViewController = navigationController
+        
+        // Enforce light or dark mode
+        if #available(iOS 13.0, *) {
+            appWindow.overrideUserInterfaceStyle = .light // Change to .dark if needed
+        }
+        
+        appWindow.makeKeyAndVisible()
+        
+        window = appWindow
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

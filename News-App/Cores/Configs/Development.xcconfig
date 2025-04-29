@@ -1,0 +1,32 @@
+//
+//  Development.xcconfig
+//  News-App
+//
+//  Created by BTS.id on 29/04/25.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Base.xcconfig"
+
+// Server URL
+SCHEME = https
+HOST = newsapi.org
+API_KEY = 4c87640d1e1741c3ac92b5c2d0cbd185
+
+// Backward Compatible Values
+ENV_NAME = dev
+
+// Overriding (do NOT change key name)
+// app name
+PRODUCT_NAME = $(APP_NAME) $(ENV_NAME)
+
+// bundle id
+PRODUCT_BUNDLE_IDENTIFIER = $(BASE_BUNDLE_IDENTIFIER).$(ENV_NAME)
+
+// app version
+MARKETING_VERSION = 1.0.1
+
+// build number
+CURRENT_PROJECT_VERSION = 1

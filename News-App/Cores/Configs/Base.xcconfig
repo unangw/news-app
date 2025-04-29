@@ -1,0 +1,12 @@
+//
+//  Base.xcconfig
+//  News-App
+//
+//  Created by BTS.id on 29/04/25.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+APP_NAME = News App
+BASE_BUNDLE_IDENTIFIER = new.app.id
