@@ -29,6 +29,18 @@
 		2214B2042DC0D85E00DEF217 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2214B2032DC0D85E00DEF217 /* MainView.xib */; };
 		2214B2062DC0D88800DEF217 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2214B2052DC0D88800DEF217 /* MainViewController.swift */; };
 		2214B2092DC0D92700DEF217 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2214B2082DC0D92700DEF217 /* BaseViewController.swift */; };
+		221648952DC1C74B0093D561 /* SourceRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221648942DC1C74B0093D561 /* SourceRequestModel.swift */; };
+		221648982DC1C99B0093D561 /* RequestState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221648972DC1C99B0093D561 /* RequestState.swift */; };
+		2216489A2DC1CD7A0093D561 /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221648992DC1CD7A0093D561 /* CustomFlowLayout.swift */; };
+		2216489E2DC1CF780093D561 /* SourceItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2216489D2DC1CF780093D561 /* SourceItemCell.xib */; };
+		221648A02DC1CFB60093D561 /* SourceItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2216489F2DC1CFB60093D561 /* SourceItemCell.swift */; };
+		223AD5B22DC1C4AB003F1A62 /* SourceResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223AD5B12DC1C4AB003F1A62 /* SourceResponseModel.swift */; };
+		223AD5B42DC1C4F9003F1A62 /* SourceItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223AD5B32DC1C4F9003F1A62 /* SourceItemModel.swift */; };
+		223AD5B62DC1C5D8003F1A62 /* SourceEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223AD5B52DC1C5D8003F1A62 /* SourceEndPoint.swift */; };
+		224502022DC1D7AF00D09188 /* GeneralChipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224502012DC1D7AF00D09188 /* GeneralChipView.swift */; };
+		224502042DC1DBAF00D09188 /* UIStackView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224502032DC1DBAF00D09188 /* UIStackView+Ext.swift */; };
+		224502072DC1E3B500D09188 /* SourceShimmerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224502062DC1E3B500D09188 /* SourceShimmerCell.xib */; };
+		224502092DC1E3C500D09188 /* SourceShimmerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224502082DC1E3C500D09188 /* SourceShimmerCell.swift */; };
 		224718BB2DC11F6600075E75 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224718BA2DC11F6600075E75 /* Category.swift */; };
 		224718BE2DC12B0200075E75 /* GridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224718BD2DC12B0200075E75 /* GridFlowLayout.swift */; };
 		224718C22DC12B7D00075E75 /* CategoryItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224718C12DC12B7D00075E75 /* CategoryItemCell.xib */; };
@@ -100,6 +112,18 @@
 		2214B2032DC0D85E00DEF217 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
 		2214B2052DC0D88800DEF217 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2214B2082DC0D92700DEF217 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		221648942DC1C74B0093D561 /* SourceRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceRequestModel.swift; sourceTree = "<group>"; };
+		221648972DC1C99B0093D561 /* RequestState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestState.swift; sourceTree = "<group>"; };
+		221648992DC1CD7A0093D561 /* CustomFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFlowLayout.swift; sourceTree = "<group>"; };
+		2216489D2DC1CF780093D561 /* SourceItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SourceItemCell.xib; sourceTree = "<group>"; };
+		2216489F2DC1CFB60093D561 /* SourceItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceItemCell.swift; sourceTree = "<group>"; };
+		223AD5B12DC1C4AB003F1A62 /* SourceResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceResponseModel.swift; sourceTree = "<group>"; };
+		223AD5B32DC1C4F9003F1A62 /* SourceItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceItemModel.swift; sourceTree = "<group>"; };
+		223AD5B52DC1C5D8003F1A62 /* SourceEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEndPoint.swift; sourceTree = "<group>"; };
+		224502012DC1D7AF00D09188 /* GeneralChipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralChipView.swift; sourceTree = "<group>"; };
+		224502032DC1DBAF00D09188 /* UIStackView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Ext.swift"; sourceTree = "<group>"; };
+		224502062DC1E3B500D09188 /* SourceShimmerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SourceShimmerCell.xib; sourceTree = "<group>"; };
+		224502082DC1E3C500D09188 /* SourceShimmerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceShimmerCell.swift; sourceTree = "<group>"; };
 		224718BA2DC11F6600075E75 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		224718BD2DC12B0200075E75 /* GridFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridFlowLayout.swift; sourceTree = "<group>"; };
 		224718C12DC12B7D00075E75 /* CategoryItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryItemCell.xib; sourceTree = "<group>"; };
@@ -252,6 +276,7 @@
 		2214B1E02DC0C07C00DEF217 /* Endpoints */ = {
 			isa = PBXGroup;
 			children = (
+				223AD5B52DC1C5D8003F1A62 /* SourceEndPoint.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -259,6 +284,8 @@
 		2214B1E12DC0C08300DEF217 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				221648922DC1C7250093D561 /* Requests */,
+				223AD5B72DC1C6E3003F1A62 /* Responses */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -276,6 +303,8 @@
 		2214B1E32DC0C0D700DEF217 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				224501FE2DC1D77A00D09188 /* SharedView */,
+				221648962DC1C98A0093D561 /* Enums */,
 				2214B2072DC0D90600DEF217 /* BaseView */,
 				224718B92DC11F5500075E75 /* Constants */,
 				224718C52DC13B5600075E75 /* Extensions */,
@@ -357,6 +386,90 @@
 			path = BaseView;
 			sourceTree = "<group>";
 		};
+		221648922DC1C7250093D561 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				221648932DC1C7340093D561 /* Source */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		221648932DC1C7340093D561 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				221648942DC1C74B0093D561 /* SourceRequestModel.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		221648962DC1C98A0093D561 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				221648972DC1C99B0093D561 /* RequestState.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		2216489B2DC1CF410093D561 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2216489C2DC1CF4D0093D561 /* SourceItemCell */,
+				224502052DC1E39300D09188 /* SourceShimmerCell */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2216489C2DC1CF4D0093D561 /* SourceItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				2216489D2DC1CF780093D561 /* SourceItemCell.xib */,
+				2216489F2DC1CFB60093D561 /* SourceItemCell.swift */,
+			);
+			path = SourceItemCell;
+			sourceTree = "<group>";
+		};
+		223AD5B02DC1C337003F1A62 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				223AD5B12DC1C4AB003F1A62 /* SourceResponseModel.swift */,
+				223AD5B32DC1C4F9003F1A62 /* SourceItemModel.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		223AD5B72DC1C6E3003F1A62 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				223AD5B02DC1C337003F1A62 /* Source */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		224501FE2DC1D77A00D09188 /* SharedView */ = {
+			isa = PBXGroup;
+			children = (
+				224501FF2DC1D79300D09188 /* Chip */,
+			);
+			path = SharedView;
+			sourceTree = "<group>";
+		};
+		224501FF2DC1D79300D09188 /* Chip */ = {
+			isa = PBXGroup;
+			children = (
+				224502012DC1D7AF00D09188 /* GeneralChipView.swift */,
+			);
+			path = Chip;
+			sourceTree = "<group>";
+		};
+		224502052DC1E39300D09188 /* SourceShimmerCell */ = {
+			isa = PBXGroup;
+			children = (
+				224502062DC1E3B500D09188 /* SourceShimmerCell.xib */,
+				224502082DC1E3C500D09188 /* SourceShimmerCell.swift */,
+			);
+			path = SourceShimmerCell;
+			sourceTree = "<group>";
+		};
 		224718B92DC11F5500075E75 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,6 +490,7 @@
 			isa = PBXGroup;
 			children = (
 				224718BD2DC12B0200075E75 /* GridFlowLayout.swift */,
+				221648992DC1CD7A0093D561 /* CustomFlowLayout.swift */,
 			);
 			path = FlowLayout;
 			sourceTree = "<group>";
@@ -396,6 +510,7 @@
 				224718C62DC13B6B00075E75 /* UIView+Nib.swift */,
 				225321102DC1B715002245F5 /* UIViewController+Ext.swift */,
 				225321122DC1B76F002245F5 /* UINavigationController.swift */,
+				224502032DC1DBAF00D09188 /* UIStackView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -442,6 +557,7 @@
 		2253211B2DC1B9E9002245F5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2216489B2DC1CF410093D561 /* Components */,
 				225321272DC1BB84002245F5 /* SourceView.xib */,
 				225321252DC1BB20002245F5 /* SourceViewController.swift */,
 			);
@@ -590,9 +706,11 @@
 			files = (
 				2214B1B92DC0B02500DEF217 /* LaunchScreen.storyboard in Resources */,
 				224718C22DC12B7D00075E75 /* CategoryItemCell.xib in Resources */,
+				2216489E2DC1CF780093D561 /* SourceItemCell.xib in Resources */,
 				225321152DC1B855002245F5 /* Icons.xcassets in Resources */,
 				225321282DC1BB84002245F5 /* SourceView.xib in Resources */,
 				2214B2042DC0D85E00DEF217 /* MainView.xib in Resources */,
+				224502072DC1E3B500D09188 /* SourceShimmerCell.xib in Resources */,
 				2214B1B62DC0B02500DEF217 /* Assets.xcassets in Resources */,
 				224718CA2DC13D4100075E75 /* Images.xcassets in Resources */,
 				2214B1B42DC0B02000DEF217 /* Main.storyboard in Resources */,
@@ -729,6 +847,7 @@
 				225321112DC1B715002245F5 /* UIViewController+Ext.swift in Sources */,
 				2214B2002DC0D7A700DEF217 /* MainService.swift in Sources */,
 				225321222DC1BA7F002245F5 /* SourceViewModel.swift in Sources */,
+				221648982DC1C99B0093D561 /* RequestState.swift in Sources */,
 				224718C72DC13B6B00075E75 /* UIView+Nib.swift in Sources */,
 				2214B1B12DC0B02000DEF217 /* ViewController.swift in Sources */,
 				2214B2022DC0D7FD00DEF217 /* MainInjection.swift in Sources */,
@@ -737,19 +856,28 @@
 				224718BB2DC11F6600075E75 /* Category.swift in Sources */,
 				2214B1AD2DC0B02000DEF217 /* AppDelegate.swift in Sources */,
 				2214B2062DC0D88800DEF217 /* MainViewController.swift in Sources */,
+				223AD5B22DC1C4AB003F1A62 /* SourceResponseModel.swift in Sources */,
 				2253211E2DC1BA09002245F5 /* SourceInjection.swift in Sources */,
 				2214B1AF2DC0B02000DEF217 /* SceneDelegate.swift in Sources */,
 				225321132DC1B76F002245F5 /* UINavigationController.swift in Sources */,
 				225321262DC1BB20002245F5 /* SourceViewController.swift in Sources */,
 				224718BE2DC12B0200075E75 /* GridFlowLayout.swift in Sources */,
 				224718C42DC12B9B00075E75 /* CategoryItemCell.swift in Sources */,
+				2216489A2DC1CD7A0093D561 /* CustomFlowLayout.swift in Sources */,
+				223AD5B62DC1C5D8003F1A62 /* SourceEndPoint.swift in Sources */,
 				2214B1EE2DC0CDCB00DEF217 /* HttpClient.swift in Sources */,
 				225321242DC1BAB0002245F5 /* SourceCoordinator.swift in Sources */,
+				223AD5B42DC1C4F9003F1A62 /* SourceItemModel.swift in Sources */,
 				2214B1F42DC0D4B900DEF217 /* AppCoordinator.swift in Sources */,
 				225321172DC1B885002245F5 /* UIImage+Icons.swift in Sources */,
 				2214B1EB2DC0CA2B00DEF217 /* Endpoint.swift in Sources */,
+				224502042DC1DBAF00D09188 /* UIStackView+Ext.swift in Sources */,
+				221648A02DC1CFB60093D561 /* SourceItemCell.swift in Sources */,
+				224502092DC1E3C500D09188 /* SourceShimmerCell.swift in Sources */,
 				2214B1F02DC0CE3C00DEF217 /* ResponseError.swift in Sources */,
 				224718CC2DC13E9400075E75 /* UIImage+Images.swift in Sources */,
+				224502022DC1D7AF00D09188 /* GeneralChipView.swift in Sources */,
+				221648952DC1C74B0093D561 /* SourceRequestModel.swift in Sources */,
 				2214B1FD2DC0D70400DEF217 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
