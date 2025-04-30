@@ -49,12 +49,23 @@ class SourceCoordinator: NSObject, SourceCoordinatorProtocol {
                 self?.navigationController.hideNavigationBar()
                 
                 self?.navigationController.popViewController(animated: true)
-            case .news:
-                self?.finish()
+            case .news(let source):
+                self?.showSourceFlow(source: source)
             }
         }
         
         navigationController.pushViewController(sourceVC, animated: true)
+    }
+    
+    func showSourceFlow(source: SourceItemModel?) {
+        // Implement News Coordinator Flow
+        let newsCoordinator = NewsCoordinator.init(navigationController)
+        newsCoordinator.finishDelegate = self
+        
+        newsCoordinator.source = source
+        
+        newsCoordinator.start()
+        childCoordinators.append(newsCoordinator)
     }
 }
 

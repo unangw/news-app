@@ -48,4 +48,5 @@ enum CoordinatorType {
     case app
     case main
     case source
+    case news
 }

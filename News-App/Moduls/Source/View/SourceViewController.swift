@@ -143,12 +143,16 @@ class SourceViewController: BaseViewController {
     @objc private func closeSourceScreen() {
         didSendEventClosure?(.source)
     }
+    
+    private func onTapSourceItem(source: SourceItemModel?) {
+        didSendEventClosure?(.news(source: source))
+    }
 }
 
 extension SourceViewController {
     enum Event {
         case source
-        case news
+        case news(source: SourceItemModel?)
     }
 }
 
@@ -180,7 +184,7 @@ extension SourceViewController: UICollectionViewDataSource, UICollectionViewDele
     
     // Part of UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        onTapSourceItem(source: viewModel?.sources[indexPath.item])
     }
 }
 
