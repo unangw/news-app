@@ -10,6 +10,7 @@ target 'News-App' do
   pod 'Kingfisher', '7.12.0'
   pod 'SwiftMessages'
   pod 'SkeletonView'
+  pod 'CHTCollectionViewWaterfallLayout'
 
   target 'News-AppTests' do
     inherit! :search_paths

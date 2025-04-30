@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsViewController" customModule="News_App" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="Lzo-Wy-vlI" id="1xQ-IH-cGa"/>
                 <outlet property="view" destination="JK3-zd-MpX" id="nTE-xm-tnf"/>
             </connections>
         </placeholder>
@@ -18,14 +19,57 @@
         <view contentMode="scaleToFill" id="JK3-zd-MpX">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qmh-Xp-UpT">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zb4-U5-9gR">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="40"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STA-vN-m3D">
+                                    <rect key="frame" x="20" y="0.0" width="353" height="40"/>
+                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="24V-c7-bf6"/>
+                                <constraint firstItem="STA-vN-m3D" firstAttribute="top" secondItem="Zb4-U5-9gR" secondAttribute="top" id="2Nm-yO-rLk"/>
+                                <constraint firstAttribute="trailing" secondItem="STA-vN-m3D" secondAttribute="trailing" constant="20" id="7Mc-Bb-h3f"/>
+                                <constraint firstItem="STA-vN-m3D" firstAttribute="leading" secondItem="Zb4-U5-9gR" secondAttribute="leading" constant="20" id="Q5T-9a-UbO"/>
+                                <constraint firstAttribute="bottom" secondItem="STA-vN-m3D" secondAttribute="bottom" id="mAV-9h-vNT"/>
+                            </constraints>
+                        </view>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Lzo-Wy-vlI">
+                            <rect key="frame" x="0.0" y="60" width="393" height="699"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KMV-lM-Fk9">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                </stackView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="8R2-1E-Qow"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="8R2-1E-Qow" firstAttribute="trailing" secondItem="qmh-Xp-UpT" secondAttribute="trailing" id="QxO-kc-Dne"/>
+                <constraint firstItem="8R2-1E-Qow" firstAttribute="bottom" secondItem="qmh-Xp-UpT" secondAttribute="bottom" id="UAu-e1-QR3"/>
+                <constraint firstItem="qmh-Xp-UpT" firstAttribute="top" secondItem="8R2-1E-Qow" secondAttribute="top" id="dl7-38-Qhe"/>
+                <constraint firstItem="qmh-Xp-UpT" firstAttribute="leading" secondItem="8R2-1E-Qow" secondAttribute="leading" id="hxx-Lm-2Eu"/>
+            </constraints>
             <point key="canvasLocation" x="17.557251908396946" y="-11.267605633802818"/>
         </view>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

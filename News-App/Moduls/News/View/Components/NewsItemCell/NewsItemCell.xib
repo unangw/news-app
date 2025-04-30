@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="evD-P9-Woc" customClass="NewsItemCell" customModule="News_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="217"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gfq-xu-shE">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="217"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xcj-CD-2Er">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="217"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qB2-aA-u37">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="124"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="124" id="mOh-6y-pg4"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="72" id="pqW-P5-XGi"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="FBM-9y-9Oj">
+                                <rect key="frame" x="0.0" y="124" width="393" height="93"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYk-3y-goL" userLabel="Name">
+                                        <rect key="frame" x="16" y="0.0" width="361" height="77"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="0.0" left="16" bottom="16" right="16"/>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Xcj-CD-2Er" secondAttribute="bottom" id="XbW-vg-pVw"/>
+                    <constraint firstItem="Xcj-CD-2Er" firstAttribute="leading" secondItem="gfq-xu-shE" secondAttribute="leading" id="iS3-PP-FsB"/>
+                    <constraint firstItem="Xcj-CD-2Er" firstAttribute="top" secondItem="gfq-xu-shE" secondAttribute="top" id="kNu-Fs-8xJ"/>
+                    <constraint firstAttribute="trailing" secondItem="Xcj-CD-2Er" secondAttribute="trailing" id="mY6-TD-ii6"/>
+                </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                        <real key="value" value="16"/>
+                    </userDefinedRuntimeAttribute>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="YES"/>
+                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                        <real key="value" value="1"/>
+                    </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+            </collectionViewCellContentView>
+            <size key="customSize" width="352" height="217"/>
+            <connections>
+                <outlet property="imageView" destination="qB2-aA-u37" id="Z1u-uw-k9d"/>
+                <outlet property="titleLabel" destination="uYk-3y-goL" id="Q4w-27-EYG"/>
+            </connections>
+            <point key="canvasLocation" x="171.75572519083968" y="18.661971830985916"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

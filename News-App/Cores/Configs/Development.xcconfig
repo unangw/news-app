@@ -13,7 +13,7 @@
 // Server URL
 SCHEME = https
 HOST = newsapi.org
-API_KEY = 4c87640d1e1741c3ac92b5c2d0cbd185
+API_KEY = 889cca776b0c4f3aaf2d28757d2e7746
 
 // Backward Compatible Values
 ENV_NAME = dev
