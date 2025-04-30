@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mMz-jI-xxk" customClass="CategoryItemCell" customModule="News_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="152" height="145"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="IZR-rV-9ds">
+                <rect key="frame" x="0.0" y="0.0" width="152" height="145"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="aQN-94-Auf">
+                        <rect key="frame" x="16" y="16" width="120" height="113"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_entertainment" translatesAutoresizingMaskIntoConstraints="NO" id="Iod-uf-XPh">
+                                <rect key="frame" x="0.0" y="0.0" width="120" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="P2U-Ju-f6G"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MVP" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krM-ag-2Bt">
+                                <rect key="frame" x="0.0" y="68" width="120" height="45"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="aQN-94-Auf" secondAttribute="bottom" constant="16" id="8oW-UQ-GzC"/>
+                    <constraint firstItem="aQN-94-Auf" firstAttribute="top" secondItem="IZR-rV-9ds" secondAttribute="top" constant="16" id="tyQ-g8-AaO"/>
+                    <constraint firstItem="aQN-94-Auf" firstAttribute="leading" secondItem="IZR-rV-9ds" secondAttribute="leading" constant="16" id="vTn-NZ-GLa"/>
+                    <constraint firstAttribute="trailing" secondItem="aQN-94-Auf" secondAttribute="trailing" constant="16" id="vjE-6R-G8F"/>
+                </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                        <real key="value" value="16"/>
+                    </userDefinedRuntimeAttribute>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="YES"/>
+                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                        <real key="value" value="1"/>
+                    </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+            </collectionViewCellContentView>
+            <size key="customSize" width="152" height="145"/>
+            <connections>
+                <outlet property="categoryImage" destination="Iod-uf-XPh" id="ghb-MB-4Hl"/>
+                <outlet property="categoryLabel" destination="krM-ag-2Bt" id="Pks-vW-h2r"/>
+            </connections>
+            <point key="canvasLocation" x="19.847328244274809" y="-6.6901408450704229"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="img_entertainment" width="128" height="128"/>
+    </resources>
+</document>
