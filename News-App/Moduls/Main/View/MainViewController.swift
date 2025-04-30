@@ -62,12 +62,16 @@ class MainViewController: BaseViewController {
         collectionView.collectionViewLayout = gridFlowLayout
         collectionView.contentInsetAdjustmentBehavior = .always
     }
+    
+    private func onTapCategoryItem(category: String) {
+        didSendEventClosure?(.source(category: category))
+    }
 }
 
 extension MainViewController {
     enum Event {
         case main
-        case source
+        case source(category: String)
     }
 }
 
@@ -100,5 +104,10 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         itemWidth = (collectionWidth / 2) - lay.minimumInteritemSpacing
         
         return CGSize(width: itemWidth, height: 0)
+    }
+    
+    // Part of UICollectionViewDelegate
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        onTapCategoryItem(category: Category.list[indexPath.item])
     }
 }

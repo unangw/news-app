@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "Components=Icons, Size=24px, Name=arrow-left.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Components=Icons, Size=24px, Name=arrow-left@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Components=Icons, Size=24px, Name=arrow-left@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

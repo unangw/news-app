@@ -36,6 +36,16 @@
 		224718C72DC13B6B00075E75 /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224718C62DC13B6B00075E75 /* UIView+Nib.swift */; };
 		224718CA2DC13D4100075E75 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 224718C92DC13D4100075E75 /* Images.xcassets */; };
 		224718CC2DC13E9400075E75 /* UIImage+Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224718CB2DC13E9400075E75 /* UIImage+Images.swift */; };
+		225321112DC1B715002245F5 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225321102DC1B715002245F5 /* UIViewController+Ext.swift */; };
+		225321132DC1B76F002245F5 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225321122DC1B76F002245F5 /* UINavigationController.swift */; };
+		225321152DC1B855002245F5 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 225321142DC1B855002245F5 /* Icons.xcassets */; };
+		225321172DC1B885002245F5 /* UIImage+Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225321162DC1B885002245F5 /* UIImage+Icons.swift */; };
+		2253211E2DC1BA09002245F5 /* SourceInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253211D2DC1BA09002245F5 /* SourceInjection.swift */; };
+		225321202DC1BA47002245F5 /* SourceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253211F2DC1BA47002245F5 /* SourceService.swift */; };
+		225321222DC1BA7F002245F5 /* SourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225321212DC1BA7F002245F5 /* SourceViewModel.swift */; };
+		225321242DC1BAB0002245F5 /* SourceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225321232DC1BAB0002245F5 /* SourceCoordinator.swift */; };
+		225321262DC1BB20002245F5 /* SourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225321252DC1BB20002245F5 /* SourceViewController.swift */; };
+		225321282DC1BB84002245F5 /* SourceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225321272DC1BB84002245F5 /* SourceView.xib */; };
 		8B5766071E1FA8817BF7A374 /* Pods_News_App_News_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B173BD3979D46BBEFFFA32B /* Pods_News_App_News_AppUITests.framework */; };
 		DBDDE32BABD388D5AA7DD2CF /* Pods_News_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0060D3808A7F6FB8CE3D2B64 /* Pods_News_App.framework */; };
 		FD82AC1078ADA129C0AA7687 /* Pods_News_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D5114B6624B92FB68C067C1 /* Pods_News_AppTests.framework */; };
@@ -97,6 +107,16 @@
 		224718C62DC13B6B00075E75 /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
 		224718C92DC13D4100075E75 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		224718CB2DC13E9400075E75 /* UIImage+Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Images.swift"; sourceTree = "<group>"; };
+		225321102DC1B715002245F5 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		225321122DC1B76F002245F5 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		225321142DC1B855002245F5 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		225321162DC1B885002245F5 /* UIImage+Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Icons.swift"; sourceTree = "<group>"; };
+		2253211D2DC1BA09002245F5 /* SourceInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceInjection.swift; sourceTree = "<group>"; };
+		2253211F2DC1BA47002245F5 /* SourceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceService.swift; sourceTree = "<group>"; };
+		225321212DC1BA7F002245F5 /* SourceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceViewModel.swift; sourceTree = "<group>"; };
+		225321232DC1BAB0002245F5 /* SourceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceCoordinator.swift; sourceTree = "<group>"; };
+		225321252DC1BB20002245F5 /* SourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceViewController.swift; sourceTree = "<group>"; };
+		225321272DC1BB84002245F5 /* SourceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SourceView.xib; sourceTree = "<group>"; };
 		5D5114B6624B92FB68C067C1 /* Pods_News_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F3ACEB5DC8A87AFB61ECC1A /* Pods-News-App-News-AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News-App-News-AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-News-App-News-AppUITests/Pods-News-App-News-AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6033BAAC291025A2B8604364 /* Pods-News-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News-App.debug.xcconfig"; path = "Target Support Files/Pods-News-App/Pods-News-App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -212,6 +232,7 @@
 		2214B1DE2DC0B0E500DEF217 /* Moduls */ = {
 			isa = PBXGroup;
 			children = (
+				225321182DC1B9D3002245F5 /* Source */,
 				2214B1F72DC0D5D700DEF217 /* Main */,
 			);
 			path = Moduls;
@@ -223,6 +244,7 @@
 				2214B1F12DC0D3A300DEF217 /* Coordinator.swift */,
 				2214B1F32DC0D4B900DEF217 /* AppCoordinator.swift */,
 				2214B1F52DC0D53F00DEF217 /* MainCoordinator.swift */,
+				225321232DC1BAB0002245F5 /* SourceCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -372,6 +394,8 @@
 			isa = PBXGroup;
 			children = (
 				224718C62DC13B6B00075E75 /* UIView+Nib.swift */,
+				225321102DC1B715002245F5 /* UIViewController+Ext.swift */,
+				225321122DC1B76F002245F5 /* UINavigationController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -380,10 +404,56 @@
 			isa = PBXGroup;
 			children = (
 				2214B1B52DC0B02500DEF217 /* Assets.xcassets */,
+				225321142DC1B855002245F5 /* Icons.xcassets */,
 				224718C92DC13D4100075E75 /* Images.xcassets */,
+				225321162DC1B885002245F5 /* UIImage+Icons.swift */,
 				224718CB2DC13E9400075E75 /* UIImage+Images.swift */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		225321182DC1B9D3002245F5 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				225321192DC1B9DF002245F5 /* DI */,
+				2253211A2DC1B9E4002245F5 /* Service */,
+				2253211B2DC1B9E9002245F5 /* View */,
+				2253211C2DC1B9ED002245F5 /* ViewModel */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		225321192DC1B9DF002245F5 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				2253211D2DC1BA09002245F5 /* SourceInjection.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		2253211A2DC1B9E4002245F5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2253211F2DC1BA47002245F5 /* SourceService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2253211B2DC1B9E9002245F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				225321272DC1BB84002245F5 /* SourceView.xib */,
+				225321252DC1BB20002245F5 /* SourceViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2253211C2DC1B9ED002245F5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				225321212DC1BA7F002245F5 /* SourceViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		2574C4F1AFB741D0A5CED19A /* Pods */ = {
@@ -520,6 +590,8 @@
 			files = (
 				2214B1B92DC0B02500DEF217 /* LaunchScreen.storyboard in Resources */,
 				224718C22DC12B7D00075E75 /* CategoryItemCell.xib in Resources */,
+				225321152DC1B855002245F5 /* Icons.xcassets in Resources */,
+				225321282DC1BB84002245F5 /* SourceView.xib in Resources */,
 				2214B2042DC0D85E00DEF217 /* MainView.xib in Resources */,
 				2214B1B62DC0B02500DEF217 /* Assets.xcassets in Resources */,
 				224718CA2DC13D4100075E75 /* Images.xcassets in Resources */,
@@ -651,9 +723,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				225321202DC1BA47002245F5 /* SourceService.swift in Sources */,
 				2214B1F22DC0D3A300DEF217 /* Coordinator.swift in Sources */,
 				2214B1F62DC0D53F00DEF217 /* MainCoordinator.swift in Sources */,
+				225321112DC1B715002245F5 /* UIViewController+Ext.swift in Sources */,
 				2214B2002DC0D7A700DEF217 /* MainService.swift in Sources */,
+				225321222DC1BA7F002245F5 /* SourceViewModel.swift in Sources */,
 				224718C72DC13B6B00075E75 /* UIView+Nib.swift in Sources */,
 				2214B1B12DC0B02000DEF217 /* ViewController.swift in Sources */,
 				2214B2022DC0D7FD00DEF217 /* MainInjection.swift in Sources */,
@@ -662,11 +737,16 @@
 				224718BB2DC11F6600075E75 /* Category.swift in Sources */,
 				2214B1AD2DC0B02000DEF217 /* AppDelegate.swift in Sources */,
 				2214B2062DC0D88800DEF217 /* MainViewController.swift in Sources */,
+				2253211E2DC1BA09002245F5 /* SourceInjection.swift in Sources */,
 				2214B1AF2DC0B02000DEF217 /* SceneDelegate.swift in Sources */,
+				225321132DC1B76F002245F5 /* UINavigationController.swift in Sources */,
+				225321262DC1BB20002245F5 /* SourceViewController.swift in Sources */,
 				224718BE2DC12B0200075E75 /* GridFlowLayout.swift in Sources */,
 				224718C42DC12B9B00075E75 /* CategoryItemCell.swift in Sources */,
 				2214B1EE2DC0CDCB00DEF217 /* HttpClient.swift in Sources */,
+				225321242DC1BAB0002245F5 /* SourceCoordinator.swift in Sources */,
 				2214B1F42DC0D4B900DEF217 /* AppCoordinator.swift in Sources */,
+				225321172DC1B885002245F5 /* UIImage+Icons.swift in Sources */,
 				2214B1EB2DC0CA2B00DEF217 /* Endpoint.swift in Sources */,
 				2214B1F02DC0CE3C00DEF217 /* ResponseError.swift in Sources */,
 				224718CC2DC13E9400075E75 /* UIImage+Images.swift in Sources */,

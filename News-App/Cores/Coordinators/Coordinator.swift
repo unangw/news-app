@@ -47,4 +47,5 @@ protocol CoordinatorFinishDelegate: AnyObject {
 enum CoordinatorType {
     case app
     case main
+    case source
 }
