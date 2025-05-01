@@ -197,18 +197,16 @@ extension SourceViewController {
             switch state {
             case .loading:
                 DispatchQueue.main.async {
+                    self.refreshControl.endRefreshing()
+                    
                     self.sourceIsLoading = true
                 }
             case .loaded:
                 DispatchQueue.main.async {
-                    self.refreshControl.endRefreshing()
-                    
                     self.sourceIsLoading = false
                 }
             case .error(_):
                 DispatchQueue.main.async {
-                    self.refreshControl.endRefreshing()
-                    
                     self.sourceIsLoading = false
                 }
             }

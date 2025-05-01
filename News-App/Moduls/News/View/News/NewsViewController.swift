@@ -279,6 +279,8 @@ extension NewsViewController {
             switch state {
             case .loading:
                 DispatchQueue.main.async {
+                    self.refreshControl.endRefreshing()
+                    
                     if self.page == 1 { self.newsIsLoading = true }
                     
                     self.isLoadingNextPage = true
@@ -288,8 +290,6 @@ extension NewsViewController {
                 break
             case .loaded:
                 DispatchQueue.main.async {
-                    self.refreshControl.endRefreshing()
-                    
                     if self.page == 1 { self.newsIsLoading = false }
                     
                     self.isLoadingNextPage = false
@@ -298,9 +298,7 @@ extension NewsViewController {
                 }
                 break
             case .error(let failure):
-                DispatchQueue.main.async {
-                    self.refreshControl.endRefreshing()
-                    
+                DispatchQueue.main.async {                    
                     if self.page == 1 { self.newsIsLoading = false }
                     
                     self.isLoadingNextPage = false
