@@ -13,14 +13,14 @@
 // Server URL
 SCHEME = https
 HOST = newsapi.org
-API_KEY = 4c87640d1e1741c3ac92b5c2d0cbd185
+API_KEY = c2379af74b444b68b7289a0a62895f94
 
 // Backward Compatible Values
 ENV_NAME = dev
 
 // Overriding (do NOT change key name)
 // app name
-PRODUCT_NAME = $(APP_NAME) $(ENV_NAME)
+PRODUCT_NAME = $(APP_NAME)
 
 // bundle id
 PRODUCT_BUNDLE_IDENTIFIER = $(BASE_BUNDLE_IDENTIFIER).$(ENV_NAME)

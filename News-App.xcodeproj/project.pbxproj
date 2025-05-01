@@ -112,7 +112,7 @@
 /* Begin PBXFileReference section */
 		0060D3808A7F6FB8CE3D2B64 /* Pods_News_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		043966732F7A62F52AEBC287 /* Pods-News-AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News-AppTests.release.xcconfig"; path = "Target Support Files/Pods-News-AppTests/Pods-News-AppTests.release.xcconfig"; sourceTree = "<group>"; };
-		2214B1A92DC0B02000DEF217 /* News App dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "News App dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2214B1A92DC0B02000DEF217 /* News App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "News App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2214B1AC2DC0B02000DEF217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2214B1AE2DC0B02000DEF217 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2214B1B02DC0B02000DEF217 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -252,7 +252,7 @@
 		2214B1AA2DC0B02000DEF217 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2214B1A92DC0B02000DEF217 /* News App dev.app */,
+				2214B1A92DC0B02000DEF217 /* News App.app */,
 				2214B1BF2DC0B02500DEF217 /* News-AppTests.xctest */,
 				2214B1C92DC0B02500DEF217 /* News-AppUITests.xctest */,
 			);
@@ -846,7 +846,7 @@
 			);
 			name = "News-App";
 			productName = "News-App";
-			productReference = 2214B1A92DC0B02000DEF217 /* News App dev.app */;
+			productReference = 2214B1A92DC0B02000DEF217 /* News App.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2214B1BE2DC0B02500DEF217 /* News-AppTests */ = {
