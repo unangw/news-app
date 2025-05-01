@@ -12,6 +12,7 @@ import CHTCollectionViewWaterfallLayout
 class NewsViewController: BaseViewController {
     // MARK: - Outlets
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var searchTextField: CustomTextField!
     
     // MARK: - Variables
     var didSendEventClosure: ((NewsViewController.Event) -> Void)?
@@ -63,6 +64,9 @@ class NewsViewController: BaseViewController {
         
         // MARK: - Setup Collection View
         setupCollectionView()
+        
+        // MARK: - Setup Search Text Field
+        setupSearchTextField()
     }
     
     private func setupNavigation() {
@@ -93,6 +97,15 @@ class NewsViewController: BaseViewController {
         collectionView.addSubview(refreshControl)
         
         refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+    }
+    
+    private func setupSearchTextField() {
+        // MARK: - Setup Search TextField
+        searchTextField.placeholder = "Search news here..."
+        
+        searchTextField.onChanged = {target in
+            self.onChangerSearchTextField(target: target)
+        }
     }
     
     private func setupNoData() {
@@ -138,13 +151,26 @@ class NewsViewController: BaseViewController {
     private func getNews(page: Int = 1) {
         self.page = page
         
-        var request = NewsRequestModel(q: nil, sources: nil, pageSize: 10, page: page)
+        var request = NewsRequestModel(
+            q: searchTextField.textField.text,
+            sources: nil,
+            pageSize: 10,
+            page: page
+        )
         
         if let sourceId = source.id {
             request.sources = [sourceId]
         }
         
         viewModel?.getNews(request: request)
+    }
+    
+    private func onChangerSearchTextField(target: Any) {
+        searchTimer?.invalidate() // Cancel previous timer
+        
+        searchTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { _ in
+            self.getNews(page: 1)
+        }
     }
     
     @objc private func closeNewsScreen() {

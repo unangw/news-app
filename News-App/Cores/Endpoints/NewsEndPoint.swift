@@ -37,6 +37,7 @@ extension NewsEndPoint: Endpoint {
         case .getNews(let request):
             let httpBody: [String: Any?] = [
                 "apiKey": Environment.apiKey,
+                "q": request.q,
                 "sources": request.sources?.joined(separator: ","),
                 "page": request.page,
                 "pageSize": request.pageSize,

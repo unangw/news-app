@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsViewController" customModule="News_App" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="Lzo-Wy-vlI" id="1xQ-IH-cGa"/>
+                <outlet property="searchTextField" destination="STA-vN-m3D" id="IHk-HW-5Hx"/>
                 <outlet property="view" destination="JK3-zd-MpX" id="nTE-xm-tnf"/>
             </connections>
         </placeholder>
@@ -26,12 +27,10 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zb4-U5-9gR">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="40"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STA-vN-m3D">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STA-vN-m3D" customClass="CustomTextField" customModule="News_App" customModuleProvider="target">
                                     <rect key="frame" x="20" y="0.0" width="353" height="40"/>
-                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="24V-c7-bf6"/>
                                 <constraint firstItem="STA-vN-m3D" firstAttribute="top" secondItem="Zb4-U5-9gR" secondAttribute="top" id="2Nm-yO-rLk"/>
@@ -67,9 +66,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
