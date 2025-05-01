@@ -205,9 +205,11 @@ extension SourceViewController {
                 DispatchQueue.main.async {
                     self.sourceIsLoading = false
                 }
-            case .error(_):
+            case .error(let failure):
                 DispatchQueue.main.async {
                     self.sourceIsLoading = false
+                    
+                    self.showToast(with: failure.localizedDescription)
                 }
             }
         }
