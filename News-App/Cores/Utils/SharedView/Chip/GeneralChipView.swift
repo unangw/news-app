@@ -37,7 +37,7 @@ class GeneralChipView: UIView {
     }
     
     private func setupUI() {
-        self.backgroundColor = .lightGray
+        self.backgroundColor = .systemGray6
         self.layer.borderColor = UIColor.black.cgColor
         
         self.layer.borderWidth = 0.5
@@ -59,7 +59,7 @@ class GeneralChipView: UIView {
     }
     
     private func setupNotNilLabel() {
-        self.backgroundColor = .lightGray
+        self.backgroundColor = .systemGray6
         self.layer.borderColor = UIColor.black.cgColor
         
         self.layer.borderWidth = 0.5
