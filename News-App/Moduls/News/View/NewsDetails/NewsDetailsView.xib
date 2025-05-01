@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsDetailsViewController" customModule="News_App" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="Yhl-c2-uns" id="Clk-bb-vRL"/>
+                <outlet property="articleWebView" destination="cZI-Yp-Vdx" id="F27-pW-w2I"/>
                 <outlet property="view" destination="iN0-l3-epB" id="wf3-Ct-LeH"/>
             </connections>
         </placeholder>
@@ -18,8 +20,28 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZI-Yp-Vdx">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Yhl-c2-uns">
+                    <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                </activityIndicatorView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Yhl-c2-uns" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4r9-JA-ndd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cZI-Yp-Vdx" secondAttribute="trailing" id="7F5-JD-aJF"/>
+                <constraint firstItem="cZI-Yp-Vdx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Sj3-yh-0Ch"/>
+                <constraint firstItem="Yhl-c2-uns" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="YM9-jE-Sfs"/>
+                <constraint firstItem="cZI-Yp-Vdx" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="hyS-fT-7TV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="cZI-Yp-Vdx" secondAttribute="bottom" id="sKl-eR-oAf"/>
+            </constraints>
             <point key="canvasLocation" x="-13" y="-12"/>
         </view>
     </objects>

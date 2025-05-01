@@ -6,8 +6,14 @@
 //
 
 import UIKit
+import WebKit
 
 class NewsDetailsViewController: BaseViewController {
+    // MARK: - Outlets
+    @IBOutlet weak var articleWebView: WKWebView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    // MARK: - Variables
     var didSendEventClosure: ((NewsDetailsViewController.Event) -> Void)?
     var article: ArticleItemModel!
     
@@ -19,8 +25,19 @@ class NewsDetailsViewController: BaseViewController {
     }
     
     private func setupUI() {
-        // MARK: Setup Navigation
+        // MARK: - Setup Navigation
         setupNavigation()
+        
+        // MARK: - Setup WebView
+        setupWebView()
+    }
+    
+    private func setupWebView() {
+        articleWebView.navigationDelegate = self
+        
+        guard let urlString = article.url, let url = URL(string: urlString) else { return }
+        let request = URLRequest(url: url)
+        articleWebView.load(request)
     }
     
     private func setupNavigation() {
@@ -36,5 +53,23 @@ class NewsDetailsViewController: BaseViewController {
 extension NewsDetailsViewController {
     enum Event {
         case newsDetails
+    }
+}
+
+extension NewsDetailsViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        activityIndicator.startAnimating()
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        activityIndicator.stopAnimating()
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        activityIndicator.stopAnimating()
+    }
+    
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+        activityIndicator.stopAnimating()
     }
 }
