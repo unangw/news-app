@@ -112,18 +112,18 @@ class NewsViewController: BaseViewController {
     }
     
     private func setupNoData() {
-        let emptyLabel = UILabel()
+        let noDataView = NoDataView()
+        noDataView.descriptionMessage = "News is empty!"
         
-        emptyLabel.text = "News is empty!"
-        emptyLabel.textAlignment = .center
-        
-        collectionView.backgroundView = emptyLabel
+        collectionView.backgroundView = noDataView
         
         // Set Constraints to center backgroundView
-        emptyLabel.translatesAutoresizingMaskIntoConstraints = false
+        noDataView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            emptyLabel.centerXAnchor.constraint(equalTo: collectionView.centerXAnchor),
-            emptyLabel.centerYAnchor.constraint(equalTo: collectionView.centerYAnchor)
+            noDataView.centerXAnchor.constraint(equalTo: collectionView.centerXAnchor),
+            noDataView.centerYAnchor.constraint(equalTo: collectionView.centerYAnchor),
+            noDataView.widthAnchor.constraint(equalTo: collectionView.widthAnchor),
+            noDataView.heightAnchor.constraint(equalTo: collectionView.heightAnchor)
         ])
     }
     
