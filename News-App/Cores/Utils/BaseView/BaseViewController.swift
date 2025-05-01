@@ -53,11 +53,10 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
         view.button?.isHidden = true
         
         // Setup font style
-//        view.bodyLabel?.font = BodyTextSMPrimary100().font
-//        view.bodyLabel?.textColor = BodyTextSMPrimary100().textColor
+        view.bodyLabel?.textColor = .white
         
         // Adjust background for error
-//        view.configureTheme(backgroundColor: .sematicError, foregroundColor: .primary100)
+        view.configureTheme(backgroundColor: .systemRed, foregroundColor: .white)
         
         var config = SwiftMessages.defaultConfig
         config.presentationStyle = .top // Set position toast
