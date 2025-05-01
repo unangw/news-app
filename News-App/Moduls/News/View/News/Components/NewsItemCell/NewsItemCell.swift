@@ -11,6 +11,7 @@ class NewsItemCell: UICollectionViewCell {
     // MARK: - Outlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var publishedAtLabel: UILabel!
     
     // MARK: - Variables
     static let identifier = "NewsItemCell"
@@ -26,5 +27,7 @@ class NewsItemCell: UICollectionViewCell {
         imageView.setImage(with: article.urlToImage)
         
         titleLabel.text = article.title ?? "-"
+        
+        publishedAtLabel.text = article.publishedAt?.toDisplayedDate() ?? "-"
     }
 }
