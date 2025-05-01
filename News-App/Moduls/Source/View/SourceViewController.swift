@@ -169,7 +169,9 @@ extension SourceViewController: UICollectionViewDataSource, UICollectionViewDele
         if sourceIsLoading {
             cell =  collectionView.dequeueReusableCell(withReuseIdentifier: SourceShimmerCell.identifier, for: indexPath)
             
-            cell.showAnimatedSkeleton()
+            DispatchQueue.main.async {
+                cell.showAnimatedSkeleton()
+            }
         } else {
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: SourceItemCell.identifier, for: indexPath)
             
