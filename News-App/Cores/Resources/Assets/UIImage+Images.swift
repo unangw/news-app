@@ -15,4 +15,7 @@ extension UIImage {
     static let imgScience: UIImage = UIImage(named: "img_science")!
     static let imgSport: UIImage = UIImage(named: "img_sport")!
     static let imgTechnology: UIImage = UIImage(named: "img_technology")!
+    static let imgNoConnection: UIImage = UIImage(named: "img_no_connection")!
+    static let imgNoData: UIImage = UIImage(named: "img_no_data")!
+    static let imgAppIcon: UIImage = UIImage(named: "img_app_icon")!
 }

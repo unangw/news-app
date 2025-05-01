@@ -8,7 +8,7 @@
 import UIKit
 
 class ErrorViewController: BaseViewController {
-    @IBAction func backButtonPressed(_ sender: UIButton) {
+    @IBAction func tryAgainPressed(_ sender: UIButton) {
         dismiss(animated: true) {
             RetryManager.shared.triggerRetry()
         }

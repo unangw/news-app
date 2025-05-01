@@ -19,22 +19,44 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STm-Bw-8TQ">
-                    <rect key="frame" x="164" y="408" width="65" height="35"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Retry"/>
-                    <connections>
-                        <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="XLY-O0-b22"/>
-                    </connections>
-                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="W1A-dM-nmN">
+                    <rect key="frame" x="79" y="317.66666666666669" width="235" height="216.66666666666669"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_no_connection" translatesAutoresizingMaskIntoConstraints="NO" id="ckm-Wb-Em2">
+                            <rect key="frame" x="60.666666666666657" y="0.0" width="114" height="114"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="114" id="1QZ-ND-BXu"/>
+                                <constraint firstAttribute="width" constant="114" id="dJl-ky-sVP"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Oops! Something went wrong" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eus-Og-TRx">
+                            <rect key="frame" x="0.0" y="138" width="235" height="20.333333333333343"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STm-Bw-8TQ">
+                            <rect key="frame" x="70" y="182.33333333333331" width="95.333333333333314" height="34.333333333333343"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Try Again"/>
+                            <connections>
+                                <action selector="tryAgainPressed:" destination="-1" eventType="touchUpInside" id="1rR-JX-QZw"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="W1A-dM-nmN" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="DE1-2q-w3a"/>
+                <constraint firstItem="W1A-dM-nmN" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="W6n-kH-IhB"/>
+            </constraints>
             <point key="canvasLocation" x="-13" y="-12"/>
         </view>
     </objects>
     <resources>
+        <image name="img_no_connection" width="170.66667175292969" height="170.66667175292969"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
