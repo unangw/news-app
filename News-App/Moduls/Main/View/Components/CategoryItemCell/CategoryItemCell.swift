@@ -21,10 +21,14 @@ class CategoryItemCell: UICollectionViewCell {
         contentView.borderColor = UIColor.black
     }
     
-    func configure(category: String, icon: UIImage) {
-        categoryLabel.text = category.capitalized
+    func configure(category: String, icon: UIImage, color: String) {
+        contentView.borderColor = UIColor(hex: color)
         
-        categoryImage.image = icon
+        categoryLabel.text = category.capitalized
+        categoryLabel.textColor = UIColor(hex: color)
+        
+        categoryImage.image = icon.withRenderingMode(.alwaysTemplate)
+        categoryImage.tintColor = UIColor(hex: color)
     }
     
     /// Don't remove this function if use CustomFlowLayout
