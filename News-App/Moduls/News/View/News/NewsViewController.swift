@@ -207,7 +207,9 @@ extension NewsViewController: UICollectionViewDataSource, UICollectionViewDelega
         if newsIsLoading {
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: NewsShimmerCell.identifier, for: indexPath)
             
-            cell.showAnimatedSkeleton()
+            DispatchQueue.main.async {
+                cell.showAnimatedSkeleton()
+            }
         } else {
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: NewsItemCell.identifier, for: indexPath)
             
