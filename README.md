@@ -13,7 +13,7 @@
 
 ## Features
 - Filter Source by Category
-- ~~Search Source~~ **(API Not Supported)**
+- ~~Source Search~~ **(API Not Supported)**
 - Filter News by Source
-- Search News
+- News Search
 - News Details (WebView)
