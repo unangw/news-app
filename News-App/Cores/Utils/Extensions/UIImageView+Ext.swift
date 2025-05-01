@@ -11,7 +11,7 @@ import Kingfisher
 extension UIImageView {
     func setImage(with urlString: String?) {
         let urlFormatted = urlString?.replacingOccurrences(of: " ", with: "%20")
-        var url: URL? = URL(string: urlFormatted ?? "")
+        let url: URL? = URL(string: urlFormatted ?? "")
         
         let processor = DownsamplingImageProcessor(size: self.bounds.size)
         
@@ -22,7 +22,7 @@ extension UIImageView {
                 return request
             }
             
-            if var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) {
+            if URLComponents(url: url, resolvingAgainstBaseURL: false) != nil {
                 customRequest.setValue("mobile", forHTTPHeaderField: "issuer")
                 customRequest.setValue("5", forHTTPHeaderField: "version-code")
                 customRequest.setValue("1.0.0", forHTTPHeaderField: "version-name")

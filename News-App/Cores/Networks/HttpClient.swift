@@ -15,7 +15,7 @@ protocol HTTPClient {
 extension HTTPClient {
     func sendRequest<T: Decodable>(endpoint: Endpoint, responseModel: T.Type) async throws -> Result<T, ResponseError> {
         do {
-            let dataTask = await AF.request( try endpoint.asURLRequest(), interceptor: MyRequestInterceptor()).serializingDecodable(T.self).response
+            let dataTask = await AF.request( try endpoint.asURLRequest(), interceptor: nil).serializingDecodable(T.self).response
             
             if Environment.envType == "dev" {
                 debugPrint(dataTask)
@@ -91,15 +91,4 @@ extension HTTPClient {
         }
     }
 
-}
-
-class MyRequestInterceptor: RequestInterceptor {
-    
-    func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
-        var adaptedRequest = urlRequest
-        
-        adaptedRequest.headers.add(name: "apiKey", value: Environment.apiKey)
-        
-        completion(.success(adaptedRequest))
-    }
 }
