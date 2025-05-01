@@ -78,6 +78,9 @@
 		227FC9AA2DC3188400CF7ADB /* NewsShimmerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FC9A92DC3188400CF7ADB /* NewsShimmerCell.swift */; };
 		227FC9B02DC31CD400CF7ADB /* NewsDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227FC9AF2DC31CD400CF7ADB /* NewsDetailsView.xib */; };
 		227FC9B22DC31D1300CF7ADB /* NewsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FC9B12DC31D1300CF7ADB /* NewsDetailsViewController.swift */; };
+		227FC9B42DC335EA00CF7ADB /* RetryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FC9B32DC335EA00CF7ADB /* RetryManager.swift */; };
+		227FC9B82DC33C9800CF7ADB /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227FC9B72DC33C9700CF7ADB /* ErrorView.xib */; };
+		227FC9BA2DC33CB100CF7ADB /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FC9B92DC33CB100CF7ADB /* ErrorViewController.swift */; };
 		8B5766071E1FA8817BF7A374 /* Pods_News_App_News_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B173BD3979D46BBEFFFA32B /* Pods_News_App_News_AppUITests.framework */; };
 		DBDDE32BABD388D5AA7DD2CF /* Pods_News_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0060D3808A7F6FB8CE3D2B64 /* Pods_News_App.framework */; };
 		FD82AC1078ADA129C0AA7687 /* Pods_News_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D5114B6624B92FB68C067C1 /* Pods_News_AppTests.framework */; };
@@ -181,6 +184,9 @@
 		227FC9A92DC3188400CF7ADB /* NewsShimmerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsShimmerCell.swift; sourceTree = "<group>"; };
 		227FC9AF2DC31CD400CF7ADB /* NewsDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsDetailsView.xib; sourceTree = "<group>"; };
 		227FC9B12DC31D1300CF7ADB /* NewsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailsViewController.swift; sourceTree = "<group>"; };
+		227FC9B32DC335EA00CF7ADB /* RetryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryManager.swift; sourceTree = "<group>"; };
+		227FC9B72DC33C9700CF7ADB /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
+		227FC9B92DC33CB100CF7ADB /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		5D5114B6624B92FB68C067C1 /* Pods_News_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F3ACEB5DC8A87AFB61ECC1A /* Pods-News-App-News-AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News-App-News-AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-News-App-News-AppUITests/Pods-News-App-News-AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6033BAAC291025A2B8604364 /* Pods-News-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News-App.debug.xcconfig"; path = "Target Support Files/Pods-News-App/Pods-News-App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -296,6 +302,7 @@
 		2214B1DE2DC0B0E500DEF217 /* Moduls */ = {
 			isa = PBXGroup;
 			children = (
+				227FC9B52DC3361A00CF7ADB /* Error */,
 				2245020A2DC1E76C00D09188 /* News */,
 				225321182DC1B9D3002245F5 /* Source */,
 				2214B1F72DC0D5D700DEF217 /* Main */,
@@ -339,6 +346,7 @@
 				2214B1EA2DC0CA2B00DEF217 /* Endpoint.swift */,
 				2214B1ED2DC0CDCB00DEF217 /* HttpClient.swift */,
 				2214B1EF2DC0CE3C00DEF217 /* ResponseError.swift */,
+				227FC9B32DC335EA00CF7ADB /* RetryManager.swift */,
 			);
 			path = Networks;
 			sourceTree = "<group>";
@@ -752,6 +760,23 @@
 			path = NewsDetails;
 			sourceTree = "<group>";
 		};
+		227FC9B52DC3361A00CF7ADB /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				227FC9B62DC3362900CF7ADB /* View */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		227FC9B62DC3362900CF7ADB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				227FC9B72DC33C9700CF7ADB /* ErrorView.xib */,
+				227FC9B92DC33CB100CF7ADB /* ErrorViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2574C4F1AFB741D0A5CED19A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -887,6 +912,7 @@
 				224502162DC1E87200D09188 /* NewsView.xib in Resources */,
 				2214B1B92DC0B02500DEF217 /* LaunchScreen.storyboard in Resources */,
 				227FC9A82DC317E600CF7ADB /* NewsShimmerCell.xib in Resources */,
+				227FC9B82DC33C9800CF7ADB /* ErrorView.xib in Resources */,
 				224718C22DC12B7D00075E75 /* CategoryItemCell.xib in Resources */,
 				2216489E2DC1CF780093D561 /* SourceItemCell.xib in Resources */,
 				225321152DC1B855002245F5 /* Icons.xcassets in Resources */,
@@ -1052,6 +1078,8 @@
 				2214B2062DC0D88800DEF217 /* MainViewController.swift in Sources */,
 				223AD5B22DC1C4AB003F1A62 /* SourceResponseModel.swift in Sources */,
 				2245021C2DC1FF1D00D09188 /* NewsEndPoint.swift in Sources */,
+				227FC9B42DC335EA00CF7ADB /* RetryManager.swift in Sources */,
+				227FC9BA2DC33CB100CF7ADB /* ErrorViewController.swift in Sources */,
 				2253211E2DC1BA09002245F5 /* SourceInjection.swift in Sources */,
 				2214B1AF2DC0B02000DEF217 /* SceneDelegate.swift in Sources */,
 				2245022A2DC20C1900D09188 /* NewsItemCell.swift in Sources */,
