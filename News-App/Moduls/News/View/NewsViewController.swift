@@ -83,6 +83,9 @@ class NewsViewController: BaseViewController {
         let nib = UINib(nibName: NewsItemCell.identifier, bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: NewsItemCell.identifier)
         
+        let shimmerNib = UINib(nibName: NewsShimmerCell.identifier, bundle: nil)
+        collectionView.register(shimmerNib, forCellWithReuseIdentifier: NewsShimmerCell.identifier)
+        
         // MARK: - Configure CollectionView
         customFlowLayout.minimumInteritemSpacing = 16
         customFlowLayout.minimumColumnSpacing = 16
@@ -188,18 +191,24 @@ extension NewsViewController {
 extension NewsViewController: UICollectionViewDataSource, UICollectionViewDelegate, CHTCollectionViewDelegateWaterfallLayout {
     // Part of UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel?.articles.count ?? 0
+        return newsIsLoading ? 10 : viewModel?.articles.count ?? 0
     }
     
     // Part of UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var cell = UICollectionViewCell()
         
-        cell = collectionView.dequeueReusableCell(withReuseIdentifier: NewsItemCell.identifier, for: indexPath)
-        
-        if !(viewModel?.articles.isEmpty ?? true) {
-            // Configure cell
-            (cell as! NewsItemCell).configure(article: viewModel?.articles[indexPath.item])
+        if newsIsLoading {
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: NewsShimmerCell.identifier, for: indexPath)
+            
+            cell.showAnimatedSkeleton()
+        } else {
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: NewsItemCell.identifier, for: indexPath)
+            
+            if !(viewModel?.articles.isEmpty ?? true) {
+                // Configure cell
+                (cell as! NewsItemCell).configure(article: viewModel?.articles[indexPath.item])
+            }
         }
         
         return cell
@@ -223,22 +232,30 @@ extension NewsViewController: UICollectionViewDataSource, UICollectionViewDelega
     // Part of CHTCollectionViewDelegateWaterfallLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let contentWidth = (collectionView.bounds.width - (20 * 2 + 16)) / 2
+        var contentHeight: CGFloat = 148
         
-        sizingCell.frame.size.width = contentWidth
+        if !newsIsLoading {
+            sizingCell.frame.size.width = contentWidth
+            
+            let item = viewModel?.articles[indexPath.item]
+            sizingCell.configure(article: item)
+            
+            sizingCell.setNeedsLayout()
+            sizingCell.layoutIfNeeded()
+            
+            let size = sizingCell.contentView.systemLayoutSizeFitting(
+                CGSize(
+                    width: contentWidth,
+                    height: UIView.layoutFittingExpandedSize.height
+                ),
+                withHorizontalFittingPriority: UILayoutPriority.required,
+                verticalFittingPriority: UILayoutPriority.fittingSizeLevel
+            )
+            
+            contentHeight = size.height
+        }
         
-        let item = viewModel?.articles[indexPath.item]
-        sizingCell.configure(article: item)
-        
-        sizingCell.setNeedsLayout()
-        sizingCell.layoutIfNeeded()
-        
-        let size = sizingCell.contentView.systemLayoutSizeFitting(
-            CGSize(width: contentWidth, height: UIView.layoutFittingExpandedSize.height),
-            withHorizontalFittingPriority: UILayoutPriority.required,
-            verticalFittingPriority: UILayoutPriority.fittingSizeLevel
-        )
-        
-        return CGSize(width: contentWidth, height: size.height)
+        return CGSize(width: contentWidth, height: contentHeight)
     }
     
     // Part of CHTCollectionViewDelegateWaterfallLayout

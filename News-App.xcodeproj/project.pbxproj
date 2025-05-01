@@ -74,6 +74,8 @@
 		227FC9A02DC30F0400CF7ADB /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FC99F2DC30F0400CF7ADB /* PaddedTextField.swift */; };
 		227FC9A32DC30F2D00CF7ADB /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227FC9A22DC30F2D00CF7ADB /* CustomTextField.xib */; };
 		227FC9A52DC3108900CF7ADB /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FC9A42DC3108900CF7ADB /* CustomTextField.swift */; };
+		227FC9A82DC317E600CF7ADB /* NewsShimmerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227FC9A72DC317E600CF7ADB /* NewsShimmerCell.xib */; };
+		227FC9AA2DC3188400CF7ADB /* NewsShimmerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FC9A92DC3188400CF7ADB /* NewsShimmerCell.swift */; };
 		8B5766071E1FA8817BF7A374 /* Pods_News_App_News_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B173BD3979D46BBEFFFA32B /* Pods_News_App_News_AppUITests.framework */; };
 		DBDDE32BABD388D5AA7DD2CF /* Pods_News_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0060D3808A7F6FB8CE3D2B64 /* Pods_News_App.framework */; };
 		FD82AC1078ADA129C0AA7687 /* Pods_News_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D5114B6624B92FB68C067C1 /* Pods_News_AppTests.framework */; };
@@ -173,6 +175,8 @@
 		227FC99F2DC30F0400CF7ADB /* PaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
 		227FC9A22DC30F2D00CF7ADB /* CustomTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
 		227FC9A42DC3108900CF7ADB /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		227FC9A72DC317E600CF7ADB /* NewsShimmerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsShimmerCell.xib; sourceTree = "<group>"; };
+		227FC9A92DC3188400CF7ADB /* NewsShimmerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsShimmerCell.swift; sourceTree = "<group>"; };
 		5D5114B6624B92FB68C067C1 /* Pods_News_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F3ACEB5DC8A87AFB61ECC1A /* Pods-News-App-News-AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News-App-News-AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-News-App-News-AppUITests/Pods-News-App-News-AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6033BAAC291025A2B8604364 /* Pods-News-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News-App.debug.xcconfig"; path = "Target Support Files/Pods-News-App/Pods-News-App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -573,6 +577,7 @@
 		224502252DC20B6F00D09188 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				227FC9A62DC317D200CF7ADB /* NewsShimmerCell */,
 				224502262DC20B7C00D09188 /* NewsItemCell */,
 			);
 			path = Components;
@@ -716,6 +721,15 @@
 			path = CustomTextField;
 			sourceTree = "<group>";
 		};
+		227FC9A62DC317D200CF7ADB /* NewsShimmerCell */ = {
+			isa = PBXGroup;
+			children = (
+				227FC9A72DC317E600CF7ADB /* NewsShimmerCell.xib */,
+				227FC9A92DC3188400CF7ADB /* NewsShimmerCell.swift */,
+			);
+			path = NewsShimmerCell;
+			sourceTree = "<group>";
+		};
 		2574C4F1AFB741D0A5CED19A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -850,6 +864,7 @@
 			files = (
 				224502162DC1E87200D09188 /* NewsView.xib in Resources */,
 				2214B1B92DC0B02500DEF217 /* LaunchScreen.storyboard in Resources */,
+				227FC9A82DC317E600CF7ADB /* NewsShimmerCell.xib in Resources */,
 				224718C22DC12B7D00075E75 /* CategoryItemCell.xib in Resources */,
 				2216489E2DC1CF780093D561 /* SourceItemCell.xib in Resources */,
 				225321152DC1B855002245F5 /* Icons.xcassets in Resources */,
@@ -998,6 +1013,7 @@
 				225321222DC1BA7F002245F5 /* SourceViewModel.swift in Sources */,
 				227FC9A52DC3108900CF7ADB /* CustomTextField.swift in Sources */,
 				221648982DC1C99B0093D561 /* RequestState.swift in Sources */,
+				227FC9AA2DC3188400CF7ADB /* NewsShimmerCell.swift in Sources */,
 				224718C72DC13B6B00075E75 /* UIView+Nib.swift in Sources */,
 				2214B1B12DC0B02000DEF217 /* ViewController.swift in Sources */,
 				227FC9A02DC30F0400CF7ADB /* PaddedTextField.swift in Sources */,
