@@ -179,12 +179,18 @@ class NewsViewController: BaseViewController {
     @objc private func closeNewsScreen() {
         didSendEventClosure?(.news)
     }
+    
+    private func onTapNewsItem(article: ArticleItemModel?) {
+        if let article = article {
+            didSendEventClosure?(.newsDetails(article: article))
+        }
+    }
 }
 
 extension NewsViewController {
     enum Event {
         case news
-        case newsDetail
+        case newsDetails(article: ArticleItemModel)
     }
 }
 
@@ -216,7 +222,7 @@ extension NewsViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     // Part of UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        onTapNewsItem(article: viewModel?.articles[indexPath.item])
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {

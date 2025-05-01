@@ -49,14 +49,27 @@ class NewsCoordinator: NSObject, NewsCoordinatorProtocol {
                 self?.navigationController.popViewController(animated: true)
                 
                 self?.finish()
-            case .newsDetail:
-                self?.finish()
+            case .newsDetails(let article):
+                self?.showNewsDetailsViewController(article: article)
             }
         }
         
         navigationController.pushViewController(newsVC, animated: true)
     }
     
+    func showNewsDetailsViewController(article: ArticleItemModel) {
+        let newsDetailsVC: NewsDetailsViewController = NewsDetailsViewController()
+        
+        newsDetailsVC.article = article
+        newsDetailsVC.didSendEventClosure = { [weak self] event in
+            switch event {
+            case .newsDetails:
+                self?.navigationController.popViewController(animated: true)
+            }
+        }
+        
+        navigationController.pushViewController(newsDetailsVC, animated: true)
+    }
 }
 
 extension NewsCoordinator: UINavigationControllerDelegate {
