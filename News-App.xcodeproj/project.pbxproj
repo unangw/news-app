@@ -72,6 +72,7 @@
 		225321262DC1BB20002245F5 /* SourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225321252DC1BB20002245F5 /* SourceViewController.swift */; };
 		225321282DC1BB84002245F5 /* SourceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225321272DC1BB84002245F5 /* SourceView.xib */; };
 		226E8CFE2DC446BA0059AC17 /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226E8CFD2DC446BA0059AC17 /* UITextField+Ext.swift */; };
+		2271C7052DC4526900674ECD /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271C7042DC4526900674ECD /* HTTPError.swift */; };
 		227FC9A02DC30F0400CF7ADB /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FC99F2DC30F0400CF7ADB /* PaddedTextField.swift */; };
 		227FC9A32DC30F2D00CF7ADB /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227FC9A22DC30F2D00CF7ADB /* CustomTextField.xib */; };
 		227FC9A52DC3108900CF7ADB /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227FC9A42DC3108900CF7ADB /* CustomTextField.swift */; };
@@ -185,6 +186,7 @@
 		225321252DC1BB20002245F5 /* SourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceViewController.swift; sourceTree = "<group>"; };
 		225321272DC1BB84002245F5 /* SourceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SourceView.xib; sourceTree = "<group>"; };
 		226E8CFD2DC446BA0059AC17 /* UITextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
+		2271C7042DC4526900674ECD /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
 		227FC99F2DC30F0400CF7ADB /* PaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
 		227FC9A22DC30F2D00CF7ADB /* CustomTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
 		227FC9A42DC3108900CF7ADB /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -473,6 +475,7 @@
 			isa = PBXGroup;
 			children = (
 				221648972DC1C99B0093D561 /* RequestState.swift */,
+				2271C7042DC4526900674ECD /* HTTPError.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -1117,6 +1120,7 @@
 				226E8CFE2DC446BA0059AC17 /* UITextField+Ext.swift in Sources */,
 				227FC9C52DC36CB200CF7ADB /* UIColor+Ext.swift in Sources */,
 				2245022A2DC20C1900D09188 /* NewsItemCell.swift in Sources */,
+				2271C7052DC4526900674ECD /* HTTPError.swift in Sources */,
 				225321132DC1B76F002245F5 /* UINavigationController.swift in Sources */,
 				225321262DC1BB20002245F5 /* SourceViewController.swift in Sources */,
 				224718BE2DC12B0200075E75 /* GridFlowLayout.swift in Sources */,

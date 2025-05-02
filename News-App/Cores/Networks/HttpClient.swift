@@ -25,34 +25,27 @@ extension HTTPClient {
             case .success(let data):
                 return .success(data)
             case .failure(let error):
-                // Check if there is no internet connection
+                var httpError: HTTPError!
+                
                 if let urlError = error.underlyingError as? URLError,
                    urlError.code == .notConnectedToInternet {
-                    // Showing error page
-                    showErrorViewController()
-                    
-                    // Save retry action & suspend it temporarily until retry is performed
-                    return try await withCheckedThrowingContinuation { continuation in
-                        RetryManager.shared.save(
-                            retryAction: {
-                                try await self.sendRequest(endpoint: endpoint, responseModel: responseModel)
-                            },
-                            continuation: { (result: Result<T, ResponseError>) in
-                                continuation.resume(returning: result)
-                            }
-                        )
-                    }
+                    httpError = .noInternet
+                } else {
+                    httpError = .unknown(code: dataTask.response?.statusCode)
                 }
-
                 
-                // Handle other errors
-                switch error {
-                case .explicitlyCancelled:
-                    return .failure(.cancelled)
-                case .sessionTaskFailed(let error):
-                    return .failure(.customMessage(message: error.localizedDescription))
-                default:
-                    return .failure(.customMessage(message: error.localizedDescription))
+                showErrorViewController(error: httpError)
+                
+                // Save retry action & suspend it temporarily until retry is performed
+                return try await withCheckedThrowingContinuation { continuation in
+                    RetryManager.shared.save(
+                        retryAction: {
+                            try await self.sendRequest(endpoint: endpoint, responseModel: responseModel)
+                        },
+                        continuation: { (result: Result<T, ResponseError>) in
+                            continuation.resume(returning: result)
+                        }
+                    )
                 }
             }
         } catch {
@@ -73,9 +66,9 @@ extension HTTPClient {
         return nil
     }
 
-    func showErrorViewController() {
+    func showErrorViewController(error: HTTPError) {
         DispatchQueue.main.async {
-            let errorVC: ErrorViewController = .init()
+            let errorVC: ErrorViewController = .init(error: error)
             
             let navigationController = UINavigationController(rootViewController: errorVC)
             navigationController.modalPresentationStyle = .overFullScreen
