@@ -9,4 +9,5 @@ import UIKit
 
 extension UIImage {
     static let icArrowLeft: UIImage = UIImage(named: "ic_arrow_left")!
+    static let icClose: UIImage = UIImage(named: "ic_close")!
 }

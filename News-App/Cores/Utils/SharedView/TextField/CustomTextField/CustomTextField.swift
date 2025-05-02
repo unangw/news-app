@@ -76,6 +76,11 @@ class CustomTextField: UIView {
         textField.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: nil)
     }
     
+    func setSuffix(_ image: UIImage, target: Any?, action: Selector?) {
+        textField.padding.right += 10
+        textField.setSuffix(image, target: target, action: action)
+    }
+    
     @IBAction func onChangedTextField(_ sender: Any) {
         self.onChanged?(sender)
     }

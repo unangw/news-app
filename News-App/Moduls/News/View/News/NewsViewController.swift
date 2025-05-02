@@ -106,6 +106,9 @@ class NewsViewController: BaseViewController {
         // MARK: - Setup Search TextField
         searchTextField.placeholder = "Search news here..."
         
+        searchTextField.setSuffix(.icClose, target: self, action: #selector(clearSearch))
+        searchTextField.textField.rightViewMode = .never // Hide suffix icon
+        
         searchTextField.onChanged = {target in
             self.onChangerSearchTextField(target: target)
         }
@@ -169,6 +172,13 @@ class NewsViewController: BaseViewController {
     }
     
     private func onChangerSearchTextField(target: Any) {
+        // show or hide suffix depending on textfield fill
+        if !(searchTextField.textField.text?.isEmpty ?? true) {
+            searchTextField.textField.rightViewMode = .always
+        } else {
+            searchTextField.textField.rightViewMode = .never
+        }
+        
         searchTimer?.invalidate() // Cancel previous timer
         
         searchTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { _ in
@@ -178,6 +188,12 @@ class NewsViewController: BaseViewController {
     
     @objc private func closeNewsScreen() {
         didSendEventClosure?(.news)
+    }
+    
+    @objc private func clearSearch() {
+        searchTextField.textField.text = nil
+        
+        getNews(page: 1)
     }
     
     private func onTapNewsItem(article: ArticleItemModel?) {
